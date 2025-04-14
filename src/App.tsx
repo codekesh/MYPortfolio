@@ -13,7 +13,7 @@ const pages = [
   "Contact",
 ]
 
-function App() {
+const App = () => {
   const pageIndex = useAppSelector((state: RootState) => state.page.pageIndex)
   const [direction, setDirection] = useState<"left" | "right">("right")
 
