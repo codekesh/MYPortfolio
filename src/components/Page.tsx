@@ -1,8 +1,8 @@
 import { motion } from "framer-motion"
-import type { FC } from "react"
+import type { FC, ReactNode } from "react"
 
 type PageProps = {
-  content: string
+  content: ReactNode
   direction: "left" | "right"
   keyId: number
 }

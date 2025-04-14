@@ -4,13 +4,20 @@ import Page from "./components/Page"
 import { useAppDispatch, useAppSelector } from "./utils/hooks"
 import { nextPage, prevPage } from "./redux/pageSlice"
 import type { RootState } from "./store"
+import About from "./Pages/About"
+import Work from "./Pages/Work"
+import Projects from "./Pages/Projects"
+import Skills from "./Pages/Skills"
+import Connect from "./Pages/Connect"
+import Cover from "./Pages/Cover"
 
 const pages = [
-  "Welcome to my Portfolio",
-  "About Me",
-  "Projects",
-  "Experience",
-  "Contact",
+  <Cover />,
+  <About />,
+  <Work />,
+  <Projects />,
+  <Skills />,
+  <Connect />,
 ]
 
 const App = () => {
