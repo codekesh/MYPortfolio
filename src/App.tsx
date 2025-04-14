@@ -1,5 +1,5 @@
 import "./App.css"
 
-export const App = () => (
-  <div className="App"></div>
-)
+export const App = () => {
+  return <div className="App"></div>
+}
