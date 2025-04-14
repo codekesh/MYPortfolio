@@ -1,12 +1,12 @@
-import { useDispatch } from "react-redux"
 import { nextPage, prevPage } from "../redux/pageSlice"
+import { useAppDispatch } from "../utils/hooks"
 
 const NavigationButtons = ({
   setDirection,
 }: {
   setDirection: (dir: "left" | "right") => void
 }) => {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   return (
     <div className="flex justify-between mt-4">
