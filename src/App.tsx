@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Page from "./components/Page"
-import type { RootState } from "./store"
 import { useAppDispatch, useAppSelector } from "./utils/hooks"
 import { nextPage, prevPage } from "./redux/pageSlice"
+import type { RootState } from "./store"
 
 const pages = [
   "Welcome to my Portfolio",
@@ -19,16 +19,18 @@ const App = () => {
   const dispatch = useAppDispatch()
 
   return (
-    <div className="flex flex-row items-center justify-center min-h-screen bg-gray-100">
-      <button
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-100">
+      <motion.button
         onClick={() => {
           setDirection("left")
           dispatch(prevPage())
         }}
-        className="px-4 py-2 bg-gray-300 rounded"
+        className="absolute left-0 h-full w-20 bg-transparent text-black hover:bg-gray-300 flex items-center justify-center"
+        whileTap={{ scale: 0.95 }}
       >
         ← Previous
-      </button>
+      </motion.button>
+
       <AnimatePresence mode="wait">
         <Page
           key={pageIndex}
@@ -37,15 +39,17 @@ const App = () => {
           keyId={pageIndex}
         />
       </AnimatePresence>
-      <button
+
+      <motion.button
         onClick={() => {
           setDirection("right")
           dispatch(nextPage())
         }}
-        className="px-4 py-2 bg-gray-300 rounded"
+        className="absolute right-0 h-full w-20 bg-transparent text-black hover:bg-gray-300 flex items-center justify-center"
+        whileTap={{ scale: 0.95 }}
       >
         Next →
-      </button>
+      </motion.button>
     </div>
   )
 }
