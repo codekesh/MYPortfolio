@@ -26,7 +26,7 @@ const App = () => {
   const dispatch = useAppDispatch()
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="relative flex items-center justify-center min-h-screen bg-gray-100 bg-[url(./assets/backgroundImage.jpg)] bg-cover bg-center">
       <motion.button
         onClick={() => {
           setDirection("left")

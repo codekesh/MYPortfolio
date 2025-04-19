@@ -1,5 +1,5 @@
 import { Typewriter } from "react-simple-typewriter"
-import photo from "../assets/MyPhoto.jpg"
+import photo from "../assets/MyPhoto.png"
 import { motion } from "framer-motion"
 
 const Cover = () => {
@@ -7,7 +7,7 @@ const Cover = () => {
     <>
       <div className="cover-heading">
         <motion.div
-          className="cover-heading text-4xl font-bold"
+          className="cover-heading text-4xl font-bold text-white"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -38,7 +38,7 @@ const Cover = () => {
 
           <div className="mb-2">
             <Typewriter
-              words={["<p>Swipe right, I promise I code well 😉</p>"]}
+              words={["<p>Click right, I promise I code well 😉</p>"]}
               typeSpeed={60}
               deleteSpeed={30}
               delaySpeed={2000}
@@ -46,7 +46,7 @@ const Cover = () => {
           </div>
           <div className="mb-2">
             <Typewriter
-              words={["<p>Let's build something together!</p>"]}
+              words={["<p>Let's build something together! 🔨</p>"]}
               typeSpeed={60}
               deleteSpeed={30}
               delaySpeed={2000}
@@ -62,7 +62,7 @@ const Cover = () => {
           </div>
         </div>
         <div className="cover-content-image">
-          <img src={photo} alt="MyPhoto" />
+          <img src={photo} alt="MyPhoto" style={{opacity: 0.8}} />
         </div>
       </div>
     </>

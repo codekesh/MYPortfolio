@@ -28,7 +28,7 @@ const Page: FC<PageProps> = ({ content, direction, keyId }) => {
   return (
     <motion.div
       key={keyId}
-      className="page w-5xl h-auto p-5 bg-white rounded-xl shadow-2xl"
+      className="page w-5xl h-auto p-5 rounded-xl shadow-2xl bg-transparent"
       initial="enter"
       animate="center"
       exit="exit"
