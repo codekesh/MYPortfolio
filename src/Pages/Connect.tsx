@@ -54,28 +54,82 @@ const Connect = () => {
     },
   ]
   return (
-    <div className="text-center p-8">
-      <h1 className="text-4xl font-bold mb-4 text-white">
-        Connect With Me! 😃
-      </h1>
-      <p className="text-base text-white mb-6">
-        Feel free to reach out to me through any of the platforms below
-      </p>
+    <>
+      <div className="text-center p-8">
+        <h1 className="text-4xl font-bold mb-4 text-white">
+          Connect With Me! 😃
+        </h1>
+        <p className="text-base text-white mb-6">
+          Feel free to reach out to me through any of the platforms below
+        </p>
 
-      <div className="flex justify-center text-3xl text-white flex-wrap">
-        {links.map(({ icon, href, color, hover }, i) => (
-          <a
-            key={i}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`mx-12 transition duration-300 ${color} ${hover}`}
-          >
-            {icon}
-          </a>
-        ))}
+        <div className="flex justify-center text-3xl text-white flex-wrap">
+          {links.map(({ icon, href, color, hover }, i) => (
+            <a
+              key={i}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`mx-12 transition duration-300 ${color} ${hover}`}
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+      <div className="form flex p-8">
+        <div className="form-description px-20">
+          <h1 className="text-3xl font-bold text-white mb-3">
+            Submit the form
+          </h1>
+          <p className="text-base text-white mb-6 text-justify">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis,
+            beatae sapiente totam ipsa eos reprehenderit soluta non voluptatem
+            impedit a laboriosam error quam sed dignissimos esse, enim fugiat ad
+            animi.
+          </p>
+        </div>
+        <div className="form-inputs">
+          <form action="" method="POST">
+            <div className="form-input">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                required
+                className="mb-4 opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
+              />
+            </div>
+            <div className="form-input">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                required
+                className="mb-4 opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
+              />
+            </div>
+            <div className="form-input">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                required
+                className="mb-4 opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="bg-transparent text-white px-6 py-2 rounded-4xl border-2 border-white hover:bg-white hover:text-black transition duration-300"
+            >
+              GET IN TOUCH
+            </button>
+          </form>
+        </div>
+      </div>
+    </>
   )
 }
 
