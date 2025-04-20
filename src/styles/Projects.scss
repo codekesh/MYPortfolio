@@ -1,0 +1,98 @@
+.projects-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 5rem;
+  span {
+    display: flex;
+    h2 {
+      margin: 0 0.5rem;
+      padding: 0;
+      font-family: "Cyborg";
+      font-weight: 900;
+      color: #ccc;
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.single {
+  min-width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+
+  .single-img img {
+    width: 300px;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 8px;
+  }
+
+  .single-detail {
+    max-width: 500px;
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .button-wrap {
+      margin-top: 1rem;
+    }
+
+    .button {
+      background: black;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.dots {
+  text-align: center;
+  margin-top: 1.5rem;
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: #000;
+    }
+  }
+}
