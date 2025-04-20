@@ -7,6 +7,8 @@ import {
 } from "react-icons/fa"
 import { SiLeetcode } from "react-icons/si"
 import { HiOutlineDocumentText } from "react-icons/hi"
+import emailjs from "emailjs-com"
+import type { FormEvent } from "react"
 
 const Connect = () => {
   const links = [
@@ -53,6 +55,27 @@ const Connect = () => {
       hover: "hover:text-green-700",
     },
   ]
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm(
+        "service_t80c2vq",
+        "template_ng168i5",
+        e.currentTarget,
+        "bKe4x0VzvCRuMHuvx",
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!")
+        },
+        () => {
+          alert("Failed to send message!")
+        },
+      )
+  }
+
   return (
     <>
       <div className="text-center p-8">
@@ -90,7 +113,7 @@ const Connect = () => {
           </p>
         </div>
         <div className="form-inputs">
-          <form action="" method="POST">
+          <form onSubmit={handleSubmit}>
             <div className="form-input">
               <input
                 type="text"
@@ -98,7 +121,7 @@ const Connect = () => {
                 id="name"
                 placeholder="Name"
                 required
-                className="mb-4 opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
+                className="mb-4 min-w-sm opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
               />
             </div>
             <div className="form-input">
@@ -108,7 +131,7 @@ const Connect = () => {
                 id="email"
                 placeholder="Email"
                 required
-                className="mb-4 opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
+                className="mb-4 min-w-sm opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
               />
             </div>
             <div className="form-input">
@@ -117,7 +140,7 @@ const Connect = () => {
                 id="message"
                 placeholder="Message"
                 required
-                className="mb-4 opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
+                className="mb-4 min-w-sm opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
               ></textarea>
             </div>
             <button
