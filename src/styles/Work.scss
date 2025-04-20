@@ -1,0 +1,74 @@
+.work-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 3px solid #ccc;
+
+    .timeline-item {
+      position: relative;
+      cursor: pointer;
+      padding: 1rem 0;
+      transition: all 0.3s;
+
+      .dot {
+        width: 14px;
+        height: 14px;
+        background: #bbb;
+        border-radius: 50%;
+        position: absolute;
+        left: -9px;
+        top: 1.25rem;
+        transition: background 0.3s;
+      }
+
+      .info {
+        margin-left: 1rem;
+
+        h5 {
+          font-weight: 600;
+        }
+
+        span {
+          font-size: 0.875rem;
+          color: gray;
+        }
+      }
+
+      &.active {
+        .dot {
+          background: #4f46e5;
+        }
+
+        h5 {
+          color: #4f46e5;
+        }
+      }
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .card {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+  }
+}
