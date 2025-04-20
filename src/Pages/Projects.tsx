@@ -1,25 +1,28 @@
 import type { FC } from "react"
 import { useRef, useState, useEffect } from "react"
 import "../styles/Projects.scss"
-import artGallery from "../assets/art_gallery.png";
-import realTime from "../assets/RealTime.png";
-import unityHospital from "../assets/UnityHospital.png";
+import artGallery from "../assets/art_gallery.png"
+import realTime from "../assets/RealTime.png"
+import unityHospital from "../assets/UnityHospital.png"
 
 const projects = [
   {
     title: "Art Gallery",
     desc: "A simple art gallery website built with React and CSS.",
     img: artGallery,
+    url: "https://github.com/codekesh/ArtGalleryFrontend",
   },
   {
     title: "RealTime Chat App",
     desc: "A real-time chat application built with React and Firebase.",
     img: realTime,
+    url: "https://github.com/codekesh/Real-Time-Chat-Repo",
   },
   {
     title: "Unity Hospital",
     desc: "Stay up to date with trending movies, their authors, casts, and ratings.",
     img: unityHospital,
+    url: "https://github.com/codekesh/UnityHospital/",
   },
 ]
 
@@ -92,7 +95,12 @@ const Projects: FC = () => {
               <h4>{project.title}</h4>
               <p>{project.desc}</p>
               <div className="button-wrap">
-                <button className="button">Visit &rarr;</button>
+                <button
+                  className="button"
+                  onClick={() => window.open(project.url, "_blank")}
+                >
+                  Visit &rarr;
+                </button>
               </div>
             </div>
           </div>
