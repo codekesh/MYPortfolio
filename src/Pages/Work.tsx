@@ -4,38 +4,54 @@ const workData = [
   {
     title: "Junior Automation Software Engineer",
     company: "Modelon",
+    url: "https://www.modelon.com/",
     duration: "Aug 2024 - Present",
-    description:
-      "Building modern UIs using React, Redux and TailwindCSS. Led the UI revamp of their customer dashboard.",
+    description: [
+      "Assisting Quality team in achieving automation goals.",
+      "Managing and improving automation pipelines.",
+      "Migrating services from Jenkins to GitLab CI/CD.",
+    ],
   },
   {
     title: "Student Intern",
     company: "Modelon",
+    url: "https://www.modelon.com/",
     duration: "Jan 2024 - Jun 2024",
-    description:
-      "Worked on backend systems in Node.js and developed internal tools with React.",
+    description: [
+      "Built a modular React and Plotly.js tool for dynamic data visualization.",
+      "Integrated Python widgets into Voila apps for advanced post-simulation charts.",
+    ],
   },
   {
     title: "Summer Intern",
     company: "Modelon",
-    duration: "Jun 2023 - July 2023",
-    description:
-      "Assisted in building a mobile app using React Native. Learned full-stack basics and agile development.",
+    url: "https://www.modelon.com/",
+    duration: "Jun 2023 - Jul 2023",
+    description: [
+      "Automated 10+ test cases using Selenium and Cucumber for faster sanity checks.",
+      "Enhanced test robustness across Windows, Linux, and Jenkins environments.",
+    ],
   },
 ]
 
 const Work = () => {
   return (
     <div id="timeline" className="h-96 overflow-y-auto custom-scrollbar p-4">
-      <h1 className="text-center text-white text-3xl">Timeline of Experience</h1>
+      <h1 className="text-center text-white text-3xl">
+        Timeline of Experience
+      </h1>
       <ul className="line">
         {workData.map(job => (
           <li>
             <div className="cont">
-              <h3>
-                {job.title} @ {job.company}
-              </h3>
-              <p>{job.description}</p>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="font-extrabold">{job.title} - </h3>
+                <h3>{job.company}</h3>
+              </div>
+
+              {job.description.map((point, index) => (
+                <p key={index}>- {point}</p>
+              ))}
               <time>{job.duration}</time>
             </div>
           </li>
