@@ -8,21 +8,24 @@ import unityHospital from "../assets/UnityHospital.png"
 const projects = [
   {
     title: "Art Gallery",
-    desc: "A simple art gallery website built with React and CSS.",
+    desc: "Designed an e-commerce web app for buying and selling user-created artifacts using the MERN stack.",
     img: artGallery,
     url: "https://github.com/codekesh/ArtGalleryFrontend",
+    color: "#d10070",
   },
   {
     title: "RealTime Chat App",
-    desc: "A real-time chat application built with React and Firebase.",
+    desc: "Anscalable real-time chat application that provides an interface for more than 100 user chats at the same time.",
     img: realTime,
     url: "https://github.com/codekesh/Real-Time-Chat-Repo",
+    color: "#a276f5",
   },
   {
     title: "Unity Hospital",
-    desc: "Stay up to date with trending movies, their authors, casts, and ratings.",
+    desc: " Led front-end development for Unity Hospital project, crafting user interfaces with HTML, CSS, and JavaScript.",
     img: unityHospital,
     url: "https://github.com/codekesh/UnityHospital/",
+    color: "#3357FF",
   },
 ]
 
@@ -92,11 +95,14 @@ const Projects: FC = () => {
               <img src={project.img} alt={`${project.title} image`} />
             </div>
             <div className="single-detail">
-              <h4>{project.title}</h4>
-              <p>{project.desc}</p>
+              <h4 style={{ color: project.color, fontWeight: 900 }}>
+                {project.title}
+              </h4>
+              <p className="text-white">{project.desc}</p>
               <div className="button-wrap">
                 <button
-                  className="button"
+                  className={`bg-transparent border-2 px-6 py-2 rounded-2xl cursor-pointer hover:bg-white hover:text-black transition`}
+                  style={{ borderColor: project.color, color: project.color }}
                   onClick={() => window.open(project.url, "_blank")}
                 >
                   Visit &rarr;
