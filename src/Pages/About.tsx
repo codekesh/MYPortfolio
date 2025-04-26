@@ -6,9 +6,7 @@ import "../styles/flipcard.css"
 const About = () => {
   const [flipped, setFlipped] = useState(false)
 
-  const fullText = `Hi, I'm Keshav — a curious coder and creative problem solver. 
-  I love building cool digital things, debugging under pressure, 
-  and bringing ideas to life with code.`
+  const fullText = `Hi, I'm Keshav Tulsyan — a passionate coder and creative problem solver. I enjoy building innovative digital solutions, debugging under pressure, and bringing ideas to life through code. Currently, I work as a Junior Automation Software Engineer at Modelon, where I focus on developing automation solutions, managing and creating pipelines, and supporting various teams and individuals by building WebApps.`
 
   return (
     <>
@@ -24,7 +22,7 @@ const About = () => {
             animate={{ rotateY: flipped ? 180 : 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flip-card-front flex items-center justify-center rounded-lg shadow-lg overflow-hidden">
+            <div className="flip-card-front flex items-center justify-center rounded-lg shadow-lg overflow-hidden cursor-pointer">
               <img
                 src={photo}
                 alt="My Photo"
@@ -34,19 +32,21 @@ const About = () => {
 
             <div className="flip-card-back bg-white p-4 flex flex-col justify-center items-center rounded-lg shadow-lg">
               <h1 className="text-xl font-bold mb-2 text-gray-800">About Me</h1>
-              <p className="text-sm text-gray-600 text-center">{fullText}</p>
+              <p className="text-sm text-gray-600 text-center text-justify">
+                {fullText}
+              </p>
             </div>
           </motion.div>
         </div>
 
         <div className="content flex flex-col">
           <motion.div
-            className="ml-8 text-lg text-white font-semibold italic"
+            className="ml-10 text-lg text-white font-semibold italic"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Wanna know about me? Just click the photo!
+            Wanna know about me? Just click me!
           </motion.div>
 
           <div className="m-10 bg-white p-6 rounded-xl shadow-lg w-130 h-80">
@@ -54,13 +54,12 @@ const About = () => {
               🏅 Achievements
             </h2>
             <ul className="list-disc list-inside text-sm text-gray-600 space-y-2">
-              <li>Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
-              <li>Provident voluptatibus illum hic, similique.</li>
-              <li>Non suscipit deleniti laborum vitae!</li>
-              <li>Asperiores officia quod impedit provident expedita consequuntur harum.</li>
-              <li>Nihil ullam mollitia cum aliquid non dicta natus.</li>
-              <li>Delectus distinctio aperiam culpa rerum quibusdam veritatis</li>
-              <li>Repudiandae sunt iusto.</li>
+              <li>Honored with the Bug Basher title at Modelon.</li>
+              <li>Achieved success in 16 Leetcode batches.</li>
+              <li>Rank 1228 in Leetcode Weekly Contest 413.</li>
+              <li>Current Rating at Leetcode - 1631</li>
+              <li>Hitting Gym Daily</li>
+              <li>Current PRs in Squats - 22.5X10</li>
             </ul>
           </div>
         </div>
