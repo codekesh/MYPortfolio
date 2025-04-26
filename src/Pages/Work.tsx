@@ -1,56 +1,46 @@
-import { useState } from "react"
 import "../styles/Work.scss"
 
 const workData = [
   {
-    title: "Frontend Engineer @ XYZ Corp",
-    duration: "2023 - Present",
+    title: "Junior Automation Software Engineer",
+    company: "Modelon",
+    duration: "Aug 2024 - Present",
     description:
       "Building modern UIs using React, Redux and TailwindCSS. Led the UI revamp of their customer dashboard.",
   },
   {
-    title: "Software Developer @ ABC Tech",
-    duration: "2021 - 2023",
+    title: "Student Intern",
+    company: "Modelon",
+    duration: "Jan 2024 - Jun 2024",
     description:
       "Worked on backend systems in Node.js and developed internal tools with React.",
   },
   {
-    title: "Intern @ CoolStart",
-    duration: "2020 - 2021",
+    title: "Summer Intern",
+    company: "Modelon",
+    duration: "Jun 2023 - July 2023",
     description:
       "Assisted in building a mobile app using React Native. Learned full-stack basics and agile development.",
   },
 ]
 
 const Work = () => {
-  const [activeIndex, setActiveIndex] = useState(0)
-
   return (
-    <div className="work-section">
-      <div className="card">
-        <h3>{workData[activeIndex].title}</h3>
-        <p>
-          <strong>{workData[activeIndex].duration}</strong>
-        </p>
-        <p>{workData[activeIndex].description}</p>
-      </div>
-      <div className="timeline">
-        {workData.map((job, index) => (
-          <div
-            key={index}
-            className={`timeline-item ${activeIndex === index ? "active" : ""}`}
-            onClick={() => {
-              setActiveIndex(index)
-            }}
-          >
-            <div className="dot" />
-            <div className="info">
-              <h5>{job.title}</h5>
-              <span>{job.duration}</span>
+    <div id="timeline" className="h-96 overflow-y-auto custom-scrollbar p-4">
+      <h1 className="text-center text-white text-3xl">Timeline of Experience</h1>
+      <ul className="line">
+        {workData.map(job => (
+          <li>
+            <div className="cont">
+              <h3>
+                {job.title} @ {job.company}
+              </h3>
+              <p>{job.description}</p>
+              <time>{job.duration}</time>
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }
