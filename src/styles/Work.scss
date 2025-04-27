@@ -25,40 +25,40 @@ ul {
     #7ab800 0%,
     #0085c3 35%,
     #f2af00 50%,
-    #ce1126 65%,
-    #6e2585 100%
+    #6e2585 65%,
+    #ce1126 100%
   );
   -moz-border-image: -moz-linear-gradient(
     top,
     #7ab800 0%,
     #0085c3 35%,
     #f2af00 50%,
-    #ce1126 65%,
-    #6e2585 100%
+    #6e2585 65%,
+    #ce1126 100%
   );
   -ms-border-image: -ms-linear-gradient(
     top,
     #7ab800 0%,
     #0085c3 35%,
     #f2af00 50%,
-    #ce1126 65%,
-    #6e2585 100%
+    #6e2585 65%,
+    #ce1126 100%
   );
   -o-border-image: -o-linear-gradient(
     top,
     #7ab800 0%,
     #0085c3 35%,
     #f2af00 50%,
-    #ce1126 65%,
-    #6e2585 100%
+    #6e2585 65%,
+    #ce1126 100%
   );
   border-image: linear-gradient(
     top,
     #7ab800 0%,
     #0085c3 35%,
     #f2af00 50%,
-    #ce1126 65%,
-    #6e2585 100%
+    #6e2585 65%,
+    #ce1126 100%
   );
   border-image-slice: 1;
   position: relative;
@@ -96,7 +96,7 @@ ul {
 
 #timeline ul li:nth-child(4):after {
   content: "\f11d";
-  background-color: #ce1126;
+  background-color: #6e2585;
 }
 
 #timeline ul li:last-child:after {
@@ -148,7 +148,7 @@ ul {
 }
 
 #timeline ul li:nth-child(4) .cont {
-  color: #ce1126;
+  color: #6e2585;
 }
 
 #timeline ul li:last-child .cont {
@@ -192,7 +192,7 @@ ul {
 }
 
 #timeline ul li:nth-child(4) .cont time {
-  background-color: #ce1126;
+  background-color: #6e2585;
 }
 
 #timeline ul li:last-child .cont time {
