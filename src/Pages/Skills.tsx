@@ -1,43 +1,156 @@
 import { useState } from "react"
 
 const skills = [
+  "C/C++",
+  "Python",
   "JavaScript",
   "TypeScript",
-  "React",
-  "Node.js",
-  "Express",
-  "Tailwind CSS",
-  "Python",
-  "C++",
-  "Git",
-  "Docker",
-  "Figma",
+  "Java",
+  "HTML",
+  "CSS",
+  "React.js",
+  "Bootstrap",
+  "Vite.js",
   "Redux",
-  "Jest",
+  "Express.js",
+  "Node.js",
+  "Selenium",
+  "Cucumber",
   "SQL",
   "MongoDB",
+  "DBMS",
+  "JQL",
+  "Docker",
+  "Jenkins",
+  "AWS",
+  "Git",
+  "CMake",
 ]
 
 const skillDetails: Record<
   string,
   { level: string; experience: string; description: string }
 > = {
-  JavaScript: {
+  "C/C++": {
     level: "Advanced",
     experience: "4+ Years",
     description: "Dynamic scripting language, core of modern web development.",
   },
-  TypeScript: {
+  Python: {
     level: "Advanced",
     experience: "3 Years",
     description: "Typed superset of JavaScript for scalable applications.",
   },
-  React: {
+  JavaScript: {
     level: "Advanced",
     experience: "3+ Years",
     description: "Component-based library for building user interfaces.",
   },
-  // Add other skills similarly...
+  TypeScript: {
+    level: "Advanced",
+    experience: "4+ Years",
+    description: "Dynamic scripting language, core of modern web development.",
+  },
+  Java: {
+    level: "Advanced",
+    experience: "3 Years",
+    description: "Typed superset of JavaScript for scalable applications.",
+  },
+  HTML: {
+    level: "Advanced",
+    experience: "3+ Years",
+    description: "Component-based library for building user interfaces.",
+  },
+  CSS: {
+    level: "Advanced",
+    experience: "4+ Years",
+    description: "Dynamic scripting language, core of modern web development.",
+  },
+  "React.js": {
+    level: "Advanced",
+    experience: "3 Years",
+    description: "Typed superset of JavaScript for scalable applications.",
+  },
+  Bootstrap: {
+    level: "Advanced",
+    experience: "3+ Years",
+    description: "Component-based library for building user interfaces.",
+  },
+  "Vite.js": {
+    level: "Advanced",
+    experience: "4+ Years",
+    description: "Dynamic scripting language, core of modern web development.",
+  },
+  "Express.js": {
+    level: "Advanced",
+    experience: "3 Years",
+    description: "Typed superset of JavaScript for scalable applications.",
+  },
+  "Node.js": {
+    level: "Advanced",
+    experience: "3+ Years",
+    description: "Component-based library for building user interfaces.",
+  },
+  Selenium: {
+    level: "Advanced",
+    experience: "4+ Years",
+    description: "Dynamic scripting language, core of modern web development.",
+  },
+  Cucumber: {
+    level: "Advanced",
+    experience: "3 Years",
+    description: "Typed superset of JavaScript for scalable applications.",
+  },
+  SQL: {
+    level: "Advanced",
+    experience: "3+ Years",
+    description: "Component-based library for building user interfaces.",
+  },
+  MongoDB: {
+    level: "Advanced",
+    experience: "4+ Years",
+    description: "Dynamic scripting language, core of modern web development.",
+  },
+  DBMS: {
+    level: "Advanced",
+    experience: "3 Years",
+    description: "Typed superset of JavaScript for scalable applications.",
+  },
+  Redux: {
+    level: "Advanced",
+    experience: "3+ Years",
+    description: "Component-based library for building user interfaces.",
+  },
+  JQL: {
+    level: "Advanced",
+    experience: "4+ Years",
+    description: "Dynamic scripting language, core of modern web development.",
+  },
+  Docker: {
+    level: "Advanced",
+    experience: "3 Years",
+    description: "Typed superset of JavaScript for scalable applications.",
+  },
+  Jenkins: {
+    level: "Advanced",
+    experience: "3+ Years",
+    description: "Component-based library for building user interfaces.",
+  },
+  AWS: {
+    level: "Advanced",
+    experience: "4+ Years",
+    description: "Dynamic scripting language, core of modern web development.",
+  },
+  Git: {
+    level: "Advanced",
+    experience: "3 Years",
+    description: "Typed superset of JavaScript for scalable applications.",
+  },
+  CMake: {
+    level: "Advanced",
+    experience: "3+ Years",
+    description: "Component-based library for building user interfaces.",
+  },
 }
 
 const Skills = () => {

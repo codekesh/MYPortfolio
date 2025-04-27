@@ -106,10 +106,8 @@ const Connect = () => {
             Submit the form
           </h1>
           <p className="text-base text-white mb-6 text-justify">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis,
-            beatae sapiente totam ipsa eos reprehenderit soluta non voluptatem
-            impedit a laboriosam error quam sed dignissimos esse, enim fugiat ad
-            animi.
+            Got a project in mind or just want to connect? I'd love to hear from
+            you. Fill out the form and let's make something awesome together!
           </p>
         </div>
         <div className="form-inputs">
