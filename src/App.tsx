@@ -10,6 +10,7 @@ import Projects from "./Pages/Projects"
 import Skills from "./Pages/Skills"
 import Connect from "./Pages/Connect"
 import Cover from "./Pages/Cover"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 
 const pages = [
   <Cover />,
@@ -32,10 +33,27 @@ const App = () => {
           setDirection("left")
           dispatch(prevPage())
         }}
-        className="absolute left-0 h-full w-20 bg-transparent text-black hover:bg-gray-300 flex items-center justify-center"
+        className="absolute left-0 h-full w-20 bg-transparent text-white flex items-center justify-center"
         whileTap={{ scale: 0.95 }}
+        whileHover={{
+          scale: 1.3,
+          backgroundColor: "#3cdb14",
+          opacity: 0.4,
+          transition: { duration: 0.3 },
+        }}
       >
-        ← Previous
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1,
+            ease: "easeInOut",
+          }}
+        >
+          <FaArrowLeft size={24} />
+        </motion.div>
       </motion.button>
 
       <AnimatePresence mode="wait">
@@ -52,10 +70,27 @@ const App = () => {
           setDirection("right")
           dispatch(nextPage())
         }}
-        className="absolute right-0 h-full w-20 bg-transparent text-black hover:bg-gray-300 flex items-center justify-center"
+        className="absolute right-0 h-full w-20 bg-transparent text-white flex items-center justify-center"
         whileTap={{ scale: 0.95 }}
+        whileHover={{
+          scale: 1.3,
+          backgroundColor: "#3cdb14",
+          opacity: 0.4,
+          transition: { duration: 0.3 },
+        }}
       >
-        Next →
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1,
+            ease: "easeInOut",
+          }}
+        >
+          <FaArrowRight size={24} />
+        </motion.div>
       </motion.button>
     </div>
   )
