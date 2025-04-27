@@ -1,33 +1,7 @@
 import type { FC } from "react"
 import { useRef, useState, useEffect } from "react"
 import "../styles/Projects.scss"
-import artGallery from "../assets/art_gallery.png"
-import realTime from "../assets/RealTime.png"
-import unityHospital from "../assets/UnityHospital.png"
-
-const projects = [
-  {
-    title: "Art Gallery",
-    desc: "Designed an e-commerce web app for buying and selling user-created artifacts using the MERN stack.",
-    img: artGallery,
-    url: "https://github.com/codekesh/ArtGalleryFrontend",
-    color: "#d10070",
-  },
-  {
-    title: "RealTime Chat App",
-    desc: "Anscalable real-time chat application that provides an interface for more than 100 user chats at the same time.",
-    img: realTime,
-    url: "https://github.com/codekesh/Real-Time-Chat-Repo",
-    color: "#a276f5",
-  },
-  {
-    title: "Unity Hospital",
-    desc: " Led front-end development for Unity Hospital project, crafting user interfaces with HTML, CSS, and JavaScript.",
-    img: unityHospital,
-    url: "https://github.com/codekesh/UnityHospital/",
-    color: "#3357FF",
-  },
-]
+import { projects } from "../assets/constants"
 
 const Projects: FC = () => {
   const sliderRef = useRef<HTMLDivElement>(null)

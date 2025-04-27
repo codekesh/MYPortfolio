@@ -2,11 +2,10 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import photo from "../assets/MyPhoto.png"
 import "../styles/flipcard.css"
+import { fullText } from "../assets/constants"
 
 const About = () => {
   const [flipped, setFlipped] = useState(false)
-
-  const fullText = `Hi, I'm Keshav Tulsyan — a passionate coder and creative problem solver. I enjoy building innovative digital solutions, debugging under pressure, and bringing ideas to life through code. Currently, I work as a Junior Automation Software Engineer at Modelon, where I focus on developing automation solutions, managing and creating pipelines, and supporting various teams and individuals by building WebApps.`
 
   return (
     <>
