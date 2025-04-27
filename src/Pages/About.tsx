@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
-import photo from "../assets/MyPhoto.png"
+import photo from "../assets/ghibliKesh.png"
 import "../styles/flipcard.css"
 import { fullText } from "../assets/constants"
 
