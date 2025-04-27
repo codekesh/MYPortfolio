@@ -10,15 +10,19 @@ const Skills = () => {
         <div className="card bg-white/7 backdrop-blur-lg border border-white/20 rounded-2xl p-6 shadow-lg max-w-sm w-full text-white transition-all duration-300">
           <h2 className="text-2xl font-semibold mb-2">{selectedSkill}</h2>
           <p className="text-sm text-white/80 mb-4">
-            {skillDetails[selectedSkill].description}
+            {skillDetails[selectedSkill].qoutes}
           </p>
           <div className="flex flex-wrap gap-2 text-sm">
-            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20">
-              {skillDetails[selectedSkill].experience}
-            </span>
-            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20">
-              {skillDetails[selectedSkill].level}
-            </span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
+            <span className="bg-white/10 px-3 py-1 rounded-full border border-white/20"></span>
           </div>
         </div>
       )}

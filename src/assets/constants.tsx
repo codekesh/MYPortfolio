@@ -107,131 +107,105 @@ const skills = [
   "AWS",
   "Git",
   "CMake",
+  "OOPS",
+  "DSA",
 ]
 
-const skillDetails: Record<
-  string,
-  { level: string; experience: string; description: string }
-> = {
+const skillDetails: Record<string, { qoutes: string }> = {
   "C/C++": {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes:
+      "C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do, it blows your whole leg off.",
   },
   Python: {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes:
+      "Abstraction is one of those notions that Python tosses out the window, yet expresses very well.",
   },
   JavaScript: {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes: "JavaScript is a language with more than its share of bad parts.",
   },
   TypeScript: {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes:
+      "If it’s essential that no one ever augment your type, then use type",
   },
   Java: {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes:
+      "Just as tasks should have a cancellation policy, threads should have an interruption policy.",
   },
   HTML: {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes:
+      "I fix things now and then, more often tweak HTML and make scripts to do things.",
   },
   CSS: {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes: "Like Women, Web also need to be make up.",
   },
   "React.js": {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes: "React developers don't age. They just keep rerendering.",
   },
   Bootstrap: {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes: "Bootstrap is like a good friend who always has your back.",
   },
   "Vite.js": {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes: "Vite is like a rocket booster for your development workflow.",
   },
   "Express.js": {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes: "Express is like a Swiss Army knife for web developers.",
   },
   "Node.js": {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes:
+      "Always bet on JavaScript. Even if it’s running on a toaster via Node.",
   },
   Selenium: {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes:
+      "Give me six hours to automate a test, and I will spend the first four setting up Selenium WebDriver.",
   },
   Cucumber: {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes:
+      "Given I have time, When I write tests, Then I realize I don't have time.",
   },
   SQL: {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes:
+      "I don't always test my SQL queries... but when I do, I do it in production.",
   },
   MongoDB: {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes:
+      "MongoDB is fantastic — if you love your data scattered like confetti at a parade.",
   },
   DBMS: {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes:
+      "A DBMS is like a library where all the books scream at you when you misplace a comma.",
   },
   Redux: {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes:
+      "Redux: The only state management system that makes you wish your app was stateless.",
   },
   JQL: {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes: "Jira is where good intentions go to drown in JQL.",
   },
   Docker: {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes:
+      "Docker: because sometimes you need to put your code in a box and ship it off.",
   },
   Jenkins: {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes: "Jenkins: where a single red ball can ruin your whole day.",
   },
   AWS: {
-    level: "Advanced",
-    experience: "4+ Years",
-    description: "Dynamic scripting language, core of modern web development.",
+    qoutes:
+      "AWS pricing is like a phone bill in the 90s — mysterious, terrifying, and somehow your fault.",
   },
   Git: {
-    level: "Advanced",
-    experience: "3 Years",
-    description: "Typed superset of JavaScript for scalable applications.",
+    qoutes:
+      "Git is the only place where 'commit' and 'push' sound easier than they really are.",
   },
   CMake: {
-    level: "Advanced",
-    experience: "3+ Years",
-    description: "Component-based library for building user interfaces.",
+    qoutes: "CMake: Turning a simple build into an adventure story since 2000.",
+  },
+  OOPS: {
+    qoutes:
+      "OOPS: The concept where everything makes sense until you actually start coding.",
+  },
+  DSA: {
+    qoutes:
+      "DSA is the gym of programming. Everyone talks about it; few actually enjoy it.",
   },
 }
 
