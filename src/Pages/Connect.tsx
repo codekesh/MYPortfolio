@@ -1,10 +1,30 @@
 import emailjs from "emailjs-com"
-import type { FormEvent } from "react"
+import { useState } from "react"
 import { links } from "../assets/constants"
+import "../styles/Connect.scss"
 
 const Connect = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [isConnecting, setIsConnecting] = useState(false)
+  const [isConnected, setIsConnected] = useState(false)
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    setIsConnecting(true)
 
     emailjs
       .sendForm(
@@ -15,10 +35,22 @@ const Connect = () => {
       )
       .then(
         () => {
-          alert("Message sent successfully!")
+          setIsConnecting(false)
+          setIsConnected(true)
+
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          })
+
+          setTimeout(() => {
+            setIsConnected(false)
+          }, 2400)
         },
         () => {
           alert("Failed to send message!")
+          setIsConnecting(false)
         },
       )
   }
@@ -66,6 +98,8 @@ const Connect = () => {
                 id="name"
                 placeholder="Name"
                 required
+                value={formData.name}
+                onChange={handleChange}
                 className="mb-4 min-w-sm opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
               />
             </div>
@@ -76,6 +110,8 @@ const Connect = () => {
                 id="email"
                 placeholder="Email"
                 required
+                value={formData.email}
+                onChange={handleChange}
                 className="mb-4 min-w-sm opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
               />
             </div>
@@ -85,14 +121,39 @@ const Connect = () => {
                 id="message"
                 placeholder="Message"
                 required
+                value={formData.message}
+                onChange={handleChange}
                 className="mb-4 min-w-sm opacity-80 rounded-none p-2 bg-transparent text-white placeholder-white border-b border-white focus:outline-none focus:ring-0 focus:border-white"
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-transparent text-white px-6 py-2 rounded-4xl border-2 border-white hover:bg-white hover:text-black transition duration-300"
+              className={`button ${isConnecting ? "connect" : ""} ${isConnected ? "connected" : ""}`}
             >
-              GET IN TOUCH
+              <a>
+                <span className="text">Connect</span>
+                <span className="progress"></span>
+                <span className="icon"></span>
+              </a>
+              <span className="svg-button">
+                <span className="letter">c</span>
+                <span className="letter">o</span>
+                <span className="letter">n</span>
+                <span className="letter">n</span>
+                <span className="letter">e</span>
+                <span className="letter">c</span>
+                <span className="letter">t</span>
+                <span className="letter">e</span>
+                <span className="letter">d</span>
+                <svg
+                  width="190"
+                  height="55"
+                  viewBox="0 0 190 55"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="0" y="0" fill="none" width="190" height="55" />
+                </svg>
+              </span>
             </button>
           </form>
         </div>
