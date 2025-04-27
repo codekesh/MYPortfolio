@@ -20,7 +20,7 @@ const Page: FC<PageProps> = ({ content, direction, keyId }) => {
     },
     exit: {
       rotateY: direction === "right" ? -90 : 90,
-      opacity: 0,
+      opacity: 1,
       transition: { duration: 0.6 },
     },
   }

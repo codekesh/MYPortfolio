@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import Page from "./components/Page"
 import { useAppDispatch, useAppSelector } from "./utils/hooks"
@@ -25,6 +25,24 @@ const App = () => {
   const pageIndex = useAppSelector((state: RootState) => state.page.pageIndex)
   const [direction, setDirection] = useState<"left" | "right">("right")
   const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    const handleKeydown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") {
+        setDirection("left")
+        dispatch(prevPage())
+      } else if (e.key === "ArrowRight") {
+        setDirection("right")
+        dispatch(nextPage())
+      }
+    }
+
+    window.addEventListener("keydown", handleKeydown)
+
+    return () => {
+      window.removeEventListener("keydown", handleKeydown)
+    }
+  }, [dispatch])
 
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-gray-100 bg-[url(./assets/backgroundImage.jpg)] bg-cover bg-center">
